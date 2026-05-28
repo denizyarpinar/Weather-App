@@ -46,7 +46,7 @@ def first_page():
 
 
 
-        url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid=cb35fdbd55f6575f42539b04a46bc611&units=metric'
+        url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid="YOUR API KEY"&units=metric'
 
         try:
                 response = requests.get(url)
@@ -83,7 +83,7 @@ def first_page():
         if selection:
             secilen_eleman = my_listbox.get(selection[0])
 
-            # Sözlüğü fonksiyonun içine aldık, böylece tıklandığı an güncel veriyi okuyacak
+            
             answer_message = {
                 "Temperature": f"Sıcaklık: {current_temperature}",
                 "pressure": f"Basınç: {current_pressure}",
